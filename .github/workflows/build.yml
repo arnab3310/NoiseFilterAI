@@ -29,9 +29,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build APK
-      run:  wget https://services.gradle.org/distributions/gradle-8.2-bin.zip
-  unzip gradle-8.2-bin.zip
-  ./gradle-8.2/bin/gradle assembleDebug
+      run: |  wget https://services.gradle.org/distributions/gradle-8.2-bin.zipunzip gradle-8.2-bin.zip./gradle-8.2/bin/gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
